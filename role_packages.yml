@@ -1,0 +1,14 @@
+# https://galaxy.ansible.com/intro
+
+# ```
+# $ ansible-galaxy install --role-file=role_packages.yml
+# ```
+
+- src: ANXS.build-essential
+- src: ANXS.fail2ban
+- src: williamyeh.fluentd
+- src: ANXS.git
+- src: ANXS.logwatch
+- src: ANXS.postgresql
+- src: geerlingguy.postfix
+- src: ANXS.timezone
