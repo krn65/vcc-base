@@ -1,19 +1,14 @@
 ---
 
 - name: Setup VCC Research Base
-  hosts: general_server:dev_server
-  vars_prompt:
-      - name: db_root_password
-        prompt: Database Root User's Password
-        private: yes
-        confirm: yes
-        when: db_root_password == "" or db_root_password is undefined
+  hosts: general_server:dev_server:localhost
+  remote_user: root
+  become: yes
   roles:
     - ANXS.timezone
     - ANXS.build-essential
     - ANXS.git
     - ANXS.fail2ban
-    - williamyeh.fluentd
     - ANXS.logwatch
     - geerlingguy.postfix
     - ANXS.postgresql

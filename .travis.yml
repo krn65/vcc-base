@@ -9,4 +9,4 @@ before_install:
 script:
   - echo localhost > inventory
   - ansible-galaxy install --role-file=role_packages.yml
-  - ansible-playbook --syntax-check -i inventory site.yml
+  - ansible-playbook -i inventory site.yml --connection=local
