@@ -1,0 +1,9 @@
+# Provision files
+!.travis.yml
+*.retry
+
+# Packages
+/roles/*.*/
+
+# Logs
+*.log
