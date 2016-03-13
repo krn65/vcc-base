@@ -64,6 +64,9 @@ EOF
 ```bash
 $ vagrant up  # Run this for the first time
 $ vagrant provision  # Run this when `vagrant up` had problem due to network error, etc
+$ vagrant ssh  # Login to the Vagrant Machine
+$ vagrant suspend  # Stop the Vagrant Machine
+$ vagrant resume  # Start the Vagrant Machine
 $ vagrant destroy --force && vagrant up  # Run this to reset everything
 ```
 

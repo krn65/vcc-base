@@ -10,8 +10,7 @@ Vagrant.configure(2) do |config|
     node.vm.box = "ubuntu/trusty64"
 
     node.vm.provider :virtualbox do |vb|
-      vb.memory = "2048"
-      vb.cpus = "1"
+      vb.customize ["modifyvm", :id, "--cpuexecutioncap", "80", "--memory", "2048"]
     end
 
     node.vm.provision :ansible do |ansible|
