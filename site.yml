@@ -1,6 +1,6 @@
 ---
 
-- name: Setup VCC Research Base
+- name: Setup VCC Research Server
   hosts: general_server:dev_server:localhost
   remote_user: root
   become: yes
