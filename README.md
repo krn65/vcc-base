@@ -15,10 +15,11 @@ This Ansible playbook constructs VCC Research Sandbox into single server node.
 * Host: Ubuntu 14.04 LTS (Trusty Tahr)
 * Client: Mac OS X 10.11
 
-#### Runtime
+#### Runtime and Tools
 - Python v2.7
 - Vagrant v1.8 (optional)
 - ssh-copy-id (optional)
+- Postico (optional)
 
 ```bash
 # Example on OS X with Homebrew
@@ -27,7 +28,8 @@ xcode-select --install \
 && brew install \
   python \
   ssh-copy-id \
-  Caskroom/cask/vagrant
+  Caskroom/cask/vagrant \
+  Caskroom/cask/postico
 ```
 
 
@@ -88,6 +90,29 @@ $ ansible-playbook site.yml --list-tasks
 $ ansible-playbook site.yml --list-hosts
 ```
 
-## Data
+## Import Data
 
-* https://dl.dropboxusercontent.com/u/6998388/vcc_data/vcc-database.dump.bz2
+* On server (e.g. vagrant), download dump data and restore it to PostgreSQL like by commands below
+
+```
+$ cd /tmp
+$ wget https://dl.dropboxusercontent.com/u/6998388/vcc_data/vcc-database.dump.bz2
+$ bzip2 -dc vcc-database.dump.bz2 > /vagrant/var/vcc-database.dump
+$ psql -U postgres --set ON_ERROR_STOP=on -f /vagrant/var/vcc-database.dump
+```
+
+
+## Lookup data on Postico
+
+* Postico is a PostgreSQL Client for Mac
+    * Screenshots below are the example how to setup to connect the database on Vagrant
+
+![Postico Settings](https://dl.dropboxusercontent.com/u/6998388/vcc_data/postico_settings.png)
+
+![Postico Commits Table](https://dl.dropboxusercontent.com/u/6998388/vcc_data/postico_commits.png)
+
+
+## Now we are ready
+
+* Anaconda should be helpful for analytics
+    * [Anaconda Documentation](https://docs.continuum.io/anaconda/index#user-guide)
