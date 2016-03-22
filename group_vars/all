@@ -1,0 +1,2 @@
+pyenv_python_versions: ["3.4.3"]
+pyenv_virtualenvs: [{ venv_name: "vcc_base", py_version: "3.4.3" }]
