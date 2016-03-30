@@ -6,7 +6,12 @@ vcc-base
 
 ## Introduction
 
-This Ansible playbook constructs VCC Research Sandbox into single server node.
+#### TL;DR
+* This Ansible playbook constructs VCC research environment into single server node.
+
+
+#### Related Papers
+* *Henning Perl, Sergej Dechand, Matthew Smith, Daniel Arp, Fabian Yamaguchi, Konrad Rieck, Sascha Fahl, and Yasemin Acar. 2015. VCCFinder: Finding Potential Vulnerabilities in Open-Source Projects to Assist Code Audits. In Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security (CCS '15). ACM, New York, NY, USA, 426-437. DOI=http://dx.doi.org/10.1145/2810103.2813604*
 
 
 ## Requirements
