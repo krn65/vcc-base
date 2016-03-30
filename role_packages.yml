@@ -4,6 +4,7 @@
 # $ ansible-galaxy install --role-file=role_packages.yml
 # ```
 
+- src: ANXS.apt
 - src: andrewrothstein.anaconda
 - src: ANXS.build-essential
 - src: ANXS.fail2ban

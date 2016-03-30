@@ -5,6 +5,7 @@
   remote_user: root
   become: yes
   roles:
+    - ANXS.apt
     - ANXS.timezone
     - ANXS.build-essential
     - ANXS.git
