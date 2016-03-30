@@ -114,5 +114,5 @@ $ psql -U postgres --set ON_ERROR_STOP=on -f /vagrant/var/vcc-database.dump
 
 ## Now we are ready
 
-* Anaconda should be helpful for analytics
-    * [Anaconda Documentation](https://docs.continuum.io/anaconda/index#user-guide)
+* [Anaconda](https://docs.continuum.io/anaconda/index#user-guide) should be helpful to install further analytical tools
+* Good luck
