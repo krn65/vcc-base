@@ -97,11 +97,10 @@ $ ansible-playbook site.yml --list-hosts
 
 ## Import Data
 
-* On server (e.g. vagrant), download dump data and restore it to PostgreSQL like by commands below
+1. Download [vcc-database.dump.bz2](https://www.dropbox.com/s/qtap9m1k33879r7/vcc-database.dump.bz2?dl=0]
+1. On server (e.g. vagrant), download dump data and restore it to PostgreSQL like by commands below
 
 ```
-$ cd /tmp
-$ wget https://dl.dropboxusercontent.com/u/6998388/vcc_data/vcc-database.dump.bz2
 $ bzip2 -dc vcc-database.dump.bz2 > /vagrant/var/vcc-database.dump
 $ psql -U postgres --set ON_ERROR_STOP=on -f /vagrant/var/vcc-database.dump
 ```
