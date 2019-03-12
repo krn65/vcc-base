@@ -97,20 +97,10 @@ $ ansible-playbook site.yml --list-hosts
 
 ## Import Data
 
-1. Download [vcc-database.dump.bz2](https://www.dropbox.com/s/qtap9m1k33879r7/vcc-database.dump.bz2?dl=0]
-1. On server (e.g. vagrant), download dump data and restore it to PostgreSQL like by commands below
+1. Download [vcc-database.dump.bz2](https://www.dropbox.com/s/qtap9m1k33879r7/vcc-database.dump.bz2?dl=0)
+1. On server (e.g. vagrant), restore the dump data to PostgreSQL like below
 
 ```
 $ bzip2 -dc vcc-database.dump.bz2 > /vagrant/var/vcc-database.dump
 $ psql -U postgres --set ON_ERROR_STOP=on -f /vagrant/var/vcc-database.dump
 ```
-
-
-## Lookup data on Postico
-
-* Postico is a PostgreSQL Client for Mac
-    * Screenshots below are the example how to setup to connect the database on Vagrant
-
-![Postico Settings](https://dl.dropboxusercontent.com/u/6998388/vcc_data/postico_settings.png)
-
-![Postico Commits Table](https://dl.dropboxusercontent.com/u/6998388/vcc_data/postico_commits.png)
