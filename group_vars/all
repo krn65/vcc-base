@@ -1,6 +1,0 @@
-postgresql_listen_addresses: "*"
-postgresql_pg_hba_trust_hosts: ["all"]
-postgresql_database_extensions:
-  - db: ""
-    extensions:
-      - hstore
